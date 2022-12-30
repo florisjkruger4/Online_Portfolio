@@ -1,0 +1,181 @@
+/* CSS Styling */
+
+body {
+  background-color: #011627;
+}
+
+.mainFont {
+  font-family: "Chakra Petch", sans-serif;
+  color: #fdfffc;
+  opacity: 1.0;
+}
+.profileDiv {
+  border-style: solid;
+  border-radius: 7px;
+  border-color: #2ec4b6;
+  border-width: 2px;
+  background-color: #01162796;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.37);
+}
+
+    .profilePic {
+      min-width: 100px;
+      max-width: 250px;
+      height: auto;
+      border-radius: 50%;
+      clip-path: circle();
+    }
+    @media only screen and (max-width: 1200px){
+      .profilePic {
+        min-width: none;
+        max-width: 225px;
+      }
+    }
+    @media only screen and (max-width: 767px){
+      .sidebar {
+        border-left: 0px solid !important;
+        border-right: 0px solid !important;
+      }
+      .colspacer{
+        padding-bottom: 30px;
+      }
+      .mailBlobContainer{
+        display: none;
+      }
+    }
+    @media only screen and (max-width: 991px){
+      .mailBlob1{
+        height: 280px;
+      }
+      .mailBlob2{
+        height: 230px;
+
+      }
+      .mail{
+        font-size: 150px;
+      }
+    }
+
+    .svg{
+        position: fixed;
+        z-index: -1;
+    }
+
+    .projectCard{
+        transition: 0.5s ease;
+        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.37);
+    }
+    .projectCard:hover{
+        transform: scale(1.05);
+    }
+
+    .iconBorder{
+        transition: 0.5s ease;
+        border-style: solid;
+        border-radius: 7px;
+        border-color: #2ec4b6;
+        border-width: 2px;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+    }
+    .iconBorder:hover{
+        transform: scale(1.3);
+    }
+
+    a, a:visited, a:hover, a:active {
+        color: inherit;
+    }
+
+    .expandBtn{
+        color: #fdfffc;
+        cursor: pointer;
+
+    }
+    .expandBtn-active{
+        color: #2ec4b6;
+    }
+
+    .expanded{
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s;
+    }
+
+    .navbar{
+      left: 50%;
+      margin-left: -180px;
+      max-width: 360px;
+      min-width: fit-content;
+      height: 75px;
+      position: fixed;
+      z-index: 1;
+      transition: 0.5s ease;
+      text-align: center;
+      border-style: solid;
+      border-radius: 0px 0px 100px 100px;
+      border-color: #2ec4b6;
+      background-color: #2ec4b6;
+      border-width: 2px;
+      font-size: 18px;
+      box-shadow: 0 0 0 0 #2ec4b6;
+      top: -5px;
+    }
+
+    .navlink:hover{
+      color: #011627;
+    }
+
+    form{
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      max-width: 600px;
+    }
+    form input, form textarea{
+      border-style: solid;
+      border-radius: 7px;
+      border-color: #2ec4b6;
+      border-width: 2px;
+    }
+    form button{
+      padding: 10px;
+      background-color: #011627;
+      color: #fdfffc;
+      border-style: solid;
+      border-radius: 50px;
+      border-color: #2ec4b6;
+      border-width: 2px;
+      cursor: pointer;
+      width: 120px;
+      align-self: center;
+      transition: 0.5s ease;
+    }
+    form button:hover{
+      background-color: #2ec4b6;
+      color: #011627;
+      transform: scale(1.1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .btn{
+      padding: 10px;
+      background-color: #011627;
+      color: #fdfffc;
+      border-style: solid;
+      border-radius: 50px;
+      border-color: #2ec4b6;
+      border-width: 2px;
+      cursor: pointer;
+      width: 220px;
+      align-self: center;
+      transition: 0.5s ease;
+    }
+    .btn:hover{
+      background-color: #2ec4b6;
+      color: #011627;
+      transform: scale(1.1);
+    }
