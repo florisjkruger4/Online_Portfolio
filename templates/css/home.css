@@ -90,10 +90,13 @@ body {
     .expandBtn{
         color: #fdfffc;
         cursor: pointer;
-
+        transition: 0.5s ease
     }
     .expandBtn-active{
         color: #2ec4b6;
+    }
+    .expandBtn:hover {
+      transform: scale(1.2);
     }
 
     .expanded{
@@ -178,4 +181,12 @@ body {
       background-color: #2ec4b6;
       color: #011627;
       transform: scale(1.1);
+    }
+
+    .projIMGs {
+      width: 45%;
+      border-style: solid;
+      border-radius: 7px;
+      border-color: #2ec4b6;
+      border-width: 2px;
     }

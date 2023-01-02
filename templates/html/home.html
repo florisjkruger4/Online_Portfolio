@@ -10,8 +10,7 @@
 
     <!-- Google Font Link -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo&family=Chakra+Petch&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Chakra+Petch&display=swap" rel="stylesheet"/>
 
     <!-- Bootstrab Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"/>
@@ -59,8 +58,8 @@
             <path id="blob11" d="M0 -135C17.4 -129.9 34.7 -124.9 48.1 -116.1C61.5 -107.3 70.8 -94.9 84.4 -84.4C97.9 -73.9 115.6 -65.4 124.7 -51.7C133.9 -37.9 134.4 -19 135 0L0 0Z" fill="#2ec4b6"></path>
             <path id="blob12" style="visibility: hidden;" d="M0 -135C12.2 -128.6 24.5 -122.1 38.7 -119.2C53 -116.3 69.2 -116.8 79.4 -109.2C89.5 -101.6 93.6 -85.9 101.4 -73.7C109.2 -61.5 120.6 -52.9 126.8 -41.2C133 -29.5 134 -14.8 135 0L0 0Z" fill="#2ec4b6"></path></g></svg>
 
-    
-    <div id="welcome" class="navbar container" style="display: flex; justify-content:center; align-items: center">
+    <!-- Nav Bar -->
+    <div class="navbar container" style="display: flex; justify-content:center; align-items: center">
       <div class="mainFont">
           <strong><a href="#welcome" style="text-decoration: none; padding-right: 20px;" class="navlink">About Me</a></strong>
           <strong><a href="#res" style="text-decoration: none;" class="navlink">Resume</a></strong>
@@ -71,7 +70,8 @@
     &nbsp; &nbsp;
     <div style="height: 115px;"></div>
 
-    <div class="container">
+    <!-- About Me -->
+    <div class="container" id="welcome">
       <div class="row">
         <div class="col-md-3 colspacer">
           <div class="card card-body h-100 profileDiv mainFont">
@@ -142,6 +142,7 @@
       <hr style="color: #2ec4b6;">
       &nbsp; &nbsp;
 
+      <!-- Social Links -->
       <div class="container" style="color: #fdfffc;">
         <div class="row">
           <div class="col-4">
@@ -162,6 +163,7 @@
       <hr style="color: #2ec4b6;">
       &nbsp; &nbsp;
 
+      <!-- Projects -->
       <h1 class="mainFont" style="text-align: center;">Projects</h1>
 
       &nbsp; &nbsp;
@@ -171,8 +173,13 @@
 
       <div class="container" style="max-width: 900px; min-width: none;">
         <div class="card card-body profileDiv mainFont projectCard">
-            <div style="display: flex;"> 
-                <h4>Storybook Generator</h4> 
+            <div style="display: flex; align-items: center;"> 
+                <h4>Storybook Generator</h4>
+
+                <div style="margin-left: 10px;">
+                  <a href="https://www.linkedin.com/in/floris-kruger-09978322a/"><i class="fa-solid fa-arrow-up-right-from-square fa-1xl" style="color: #2ec4b6; margin: auto;"></i></a>
+                </div>
+                
                 <div style="margin-left: auto;" >
                   <img src="{% static 'images/Django_Logo.png' %}" style="width: 40px; filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(184deg) brightness(108%) contrast(101%);"/> 
                   &nbsp;
@@ -183,7 +190,7 @@
             </div>
             <hr style="color: #2ec4b6" >
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repellendus molestias ut nisi deleniti odit, ad eum consectetur sapiente veritatis, tenetur quibusdam repellat quas fugiat voluptatem iure aliquid quam hic? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repellendus molestias ut nisi deleniti odit, ad eum consectetur sapiente veritatis, tenetur quibusdam repellat quas fugiat voluptatem iure aliquid quam hic? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repellendus molestias ut nisi deleniti odit, ad eum consectetur sapiente veritatis, tenetur quibusdam repellat quas fugiat voluptatem iure aliquid quam hic?
+              Using OpenAI's Chat GTP-3 API to generate a kids storybook with an artificially drawn cover image and text completion. This application allows the user to select from four different storybook themes and answer three short story prompts within the selected theme to generate the desired storybook. Python's gTTS (Google Text-to-Speech) library is also used to interface with Google Translate test-to-speech API in order to read the generated storybook out loud back to the user if they desire to do so. 
             </p>
             <div style="text-align: center;">
                 <button style="background: none; border: none;" class="expandBtn" type="button">
@@ -192,12 +199,22 @@
                 <div class="expanded" style="text-align: left;">
                     <hr style="color: #2ec4b6" >
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repellendus molestias ut nisi deleniti odit, ad eum consectetur sapiente veritatis, tenetur quibusdam repellat quas fugiat voluptatem iure aliquid quam hic?
+                        The different storybook themes are Fantasy, Sports, Adventure and Spooky. The following is an example of a fantasy themed storybook that was generated by answering the following prompts in the multistep form. <br> 
+                        <ul>
+                          <li>Enter a name! - Scooby Doo</li>
+                          <li>Enter your story's quest! - rescueing a princess</li>
+                          <li>Enter a location! - a medieval kingdom</li>
+                        </ul> 
+                        Hints for the prompt are also providded in case the user gets stuck or cannot think of anything. New suggestions are provided upon refreshing the page.
                     </p>
-                    <div style="text-align: center;">
-                      <img src="{% static 'images/YM_Preview.png' %}" style="width: 500px;"/>
-                      <div style="height: 10px;"></div>
-                      <img src="{% static 'images/YM_Preview2.png' %}" style="width: 500px;"/>
+                    <div style="display: flex; justify-content: space-around;">
+                      <img src="{% static 'images/Storybook_Generator_IMGs/StorybookIMG1.png' %}" class="projIMGs"/>
+                      <img src="{% static 'images/Storybook_Generator_IMGs/StorybookIMG2.png' %}" class="projIMGs"/>
+                    </div>
+                    &nbsp;
+                    <div style="display: flex; justify-content: space-around;">
+                      <img src="{% static 'images/Storybook_Generator_IMGs/StorybookIMG3.png' %}" class="projIMGs"/>
+                      <img src="{% static 'images/Storybook_Generator_IMGs/StorybookIMG4.png' %}" class="projIMGs"/>
                     </div>
                 </div>
             </div>
@@ -209,8 +226,13 @@
     
     <div class="container" style="max-width: 900px; min-width: none;">
         <div class="card card-body profileDiv mainFont projectCard">
-            <div style="display: flex;">
+            <div style="display: flex; align-items: center;">
                 <h4>Yellowmap</h4> 
+
+                <div style="margin-left: 10px;">
+                  <a href="https://www.linkedin.com/in/floris-kruger-09978322a/"><i class="fa-solid fa-arrow-up-right-from-square fa-1xl" style="color: #2ec4b6; margin: auto;"></i></a>
+                </div>
+
                 <div style="margin-left: auto;" >
                   <img src="{% static 'images/Django_Logo.png' %}" style="width: 40px; filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(184deg) brightness(108%) contrast(101%);"/> 
                   &nbsp;
@@ -221,7 +243,7 @@
             </div>
             <hr style="color: #2ec4b6" >
             <p>
-              An interactive website which incorporates geospatial data on Yellowstone National Park. Provides a map view of Yellowstone with togglable filters to give more information about the park. Yellowmap also provides directional functionality in order to get to a destination, along with G.P.S. instructions and an estimated time of arrival by car. Users are also able to upload images and descriptions of various wildlife animals that are found in the park and set a marker with specific latitude and longitude coordinates of where the animal was observed.
+              An interactive website which incorporates geospatial data on Yellowstone National Park and the use of the Mapbox API. This application provides a map view of Yellowstone with togglable filters to give more information about the park. Yellowmap also provides directional functionality in order to get to a destination, along with written G.P.S. instructions and gives an estimated time of arrival by car.
             </p>
             <div style="text-align: center;">
                 <button style="background: none; border: none;" class="expandBtn" type="button">
@@ -230,7 +252,7 @@
                 <div class="expanded" style="text-align: left;">
                     <hr style="color: #2ec4b6" >
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repellendus molestias ut nisi deleniti odit, ad eum consectetur sapiente veritatis, tenetur quibusdam repellat quas fugiat voluptatem iure aliquid quam hic?
+                        Users are also able to upload images and descriptions of various wildlife animals that are found in the park and set a marker with specific latitude and longitude coordinates of where the animal was observed. The posts made by users are logged into the Django admin databse and can be viewd on the posts page along with their descriptions, pictures and timestamps. 
                     </p>
                     <div style="text-align: center;">
                       <img src="{% static 'images/YM_Preview.png' %}" style="width: 500px;"/>
@@ -247,8 +269,13 @@
 
     <div class="container" style="max-width: 900px; min-width: none;">
       <div class="card card-body profileDiv mainFont projectCard">
-          <div style="display: flex;">
+          <div style="display: flex; align-items: center;">
               <h4>Sorting Visualizer</h4> 
+
+              <div style="margin-left: 10px;">
+                <a href="https://www.linkedin.com/in/floris-kruger-09978322a/"><i class="fa-solid fa-arrow-up-right-from-square fa-1xl" style="color: #2ec4b6; margin: auto;"></i></a>
+              </div>
+
               <div style="margin-left: auto;" >
                   <img src="{% static 'images/Raylib_logo.png' %}" style="width: 40px; margin-left: auto; filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(184deg) brightness(108%) contrast(101%);"/>
                   &nbsp;
@@ -257,7 +284,7 @@
           </div>
           <hr style="color: #2ec4b6" >
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repellendus molestias ut nisi deleniti odit, ad eum consectetur sapiente veritatis, tenetur quibusdam repellat quas fugiat voluptatem iure aliquid quam hic? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repellendus molestias ut nisi deleniti odit, ad eum consectetur sapiente veritatis, tenetur quibusdam repellat quas fugiat voluptatem iure aliquid quam hic? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repellendus molestias ut nisi deleniti odit, ad eum consectetur sapiente veritatis, tenetur quibusdam repellat quas fugiat voluptatem iure aliquid quam hic?
+            Programmed in C++, this program makes use of the software development open source library called Raylib which is used to design graphical applications. In this program, Raylib is used to help visually show various sorting algorithms and how they function in order to sort a set number of quantities in an array which are reperesented by rectangular bars that have different heights according to their value. 
           </p>
           <div style="text-align: center;">
               <button style="background: none; border: none;" class="expandBtn" type="button">
@@ -266,7 +293,7 @@
               <div class="expanded" style="text-align: left;">
                   <hr style="color: #2ec4b6" >
                   <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repellendus molestias ut nisi deleniti odit, ad eum consectetur sapiente veritatis, tenetur quibusdam repellat quas fugiat voluptatem iure aliquid quam hic? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repellendus molestias ut nisi deleniti odit, ad eum consectetur sapiente veritatis, tenetur quibusdam repellat quas fugiat voluptatem iure aliquid quam hic? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repellendus molestias ut nisi deleniti odit, ad eum consectetur sapiente veritatis, tenetur quibusdam repellat quas fugiat voluptatem iure aliquid quam hic?
+                      This sorting visualizer showcases four different sorting algorithms including... and ... The program also provides a randomize array option which generates a completely new and randomly sorted selection of bars within the array.
                   </p>
               </div>
           </div>
@@ -277,8 +304,13 @@
 
     <div class="container" style="max-width: 900px; min-width: none;">
         <div class="card card-body profileDiv mainFont projectCard">
-            <div style="display: flex;">
+            <div style="display: flex; align-items: center;">
               <h4>Clear the Forest</h4> 
+
+              <div style="margin-left: 10px;">
+                <a href="https://www.linkedin.com/in/floris-kruger-09978322a/"><i class="fa-solid fa-arrow-up-right-from-square fa-1xl" style="color: #2ec4b6; margin: auto;"></i></a>
+              </div>
+              
                 <div style="margin-left: auto;" >
                   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" fill="currentColor" class="bi bi-unity" viewBox="0 0 16 16" style="margin-left: auto;">
                     <path d="M15 11.2V3.733L8.61 0v2.867l2.503 1.466c.099.067.099.2 0 .234L8.148 6.3c-.099.067-.197.033-.263 0L4.92 4.567c-.099-.034-.099-.2 0-.234l2.504-1.466V0L1 3.733V11.2v-.033.033l2.438-1.433V6.833c0-.1.131-.166.197-.133L6.6 8.433c.099.067.132.134.132.234v3.466c0 .1-.132.167-.198.134L4.031 10.8l-2.438 1.433L7.983 16l6.391-3.733-2.438-1.434L9.434 12.3c-.099.067-.198 0-.198-.133V8.7c0-.1.066-.2.132-.233l2.965-1.734c.099-.066.197 0 .197.134V9.8L15 11.2Z"/></svg>
@@ -288,7 +320,7 @@
             </div>
             <hr style="color: #2ec4b6" >
             <p>
-              2D platformer type game programmed in C# within the Unity Game Engine. Art was designed using Adobe Phoroshop and includes many different sprites. The game involves navigating around a forest and using two different weapon types to kill various monsters and collect gems. All assets were designed uniquely from scratch.
+              This 2D platformer game is programmed in C# within the Unity Game Engine. All the art was designed completely from scratch using Adobe Photoshop and includes a wide variety of different pixel art sprites. The game involves navigating around a forest and using two different weapon types to kill various monsters and collect gems. All assets were designed uniquely from scratch.
             </p>
             <div style="text-align: center;">
                 <button style="background: none; border: none;" class="expandBtn" type="button">
@@ -297,7 +329,7 @@
                 <div class="expanded" style="text-align: left;">
                     <hr style="color: #2ec4b6" >
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repellendus molestias ut nisi deleniti odit, ad eum consectetur sapiente veritatis, tenetur quibusdam repellat quas fugiat voluptatem iure aliquid quam hic?
+                        The game focuses on giving player feedback to interact with various items throughout the level and explore which weapon type works best in different situations. The opjective of the game is quite simple but it is visually pleasing and has responsive gameplay.
                     </p>
                 </div>
             </div>
@@ -309,10 +341,11 @@
           &nbsp; &nbsp;
           <div style="height: 15px;"></div>
 
+          <!-- Resume -->
           <div class="container" id="res">
             <div class="row">
               <div style="display: flex; align-items: center; justify-content: center; height: 50px;" class="mainFont">
-                <a href="{% static 'images/Resume.pdf' %}"><button class="btn">Download My Resume <i class="fa-solid fa-file-arrow-down"></i></button></a>
+                <a href="{% static 'images/Official_Resume.pdf' %}"><button class="btn">Download My Resume <i class="fa-solid fa-file-arrow-down"></i></button></a>
               </div>
             </div>
           </div>
@@ -323,6 +356,7 @@
           &nbsp; &nbsp;
           <div style="height: 20px;"></div>
 
+          <!-- Contact Me -->
           <div class="container profileDiv mainFont" style="max-height: 500px; max-width: 1050px; min-width: none; min-height: none;" id="contactForm">
             &nbsp; &nbsp;
             <div class="row">
