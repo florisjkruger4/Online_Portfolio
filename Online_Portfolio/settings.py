@@ -115,6 +115,8 @@ STATICFILES_DIRS = [
 
 STATIC_URL = 'staticfiles/'
 
+STATIC_ROOT = "/www/floriskruger.com/staticfiles/"
+
 MEDIA_ROOT = ''
 MEDIA_URL = ''
 
