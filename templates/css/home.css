@@ -90,19 +90,20 @@ body {
     .expandBtn{
         color: #fdfffc;
         cursor: pointer;
-        transition: 0.5s ease
+        transition: 0.3s ease
     }
     .expandBtn-active{
         color: #2ec4b6;
     }
     .expandBtn:hover {
-      transform: scale(1.2);
+      transform: scale(1.15);
     }
 
     .expanded{
         overflow: hidden;
         max-height: 0;
-        transition: max-height 0.5s;
+        transition: max-height 0.5s ease;
+        padding-bottom: 10px;
     }
 
     .navbar{
@@ -189,4 +190,13 @@ body {
       border-radius: 7px;
       border-color: #2ec4b6;
       border-width: 2px;
+    }
+
+    .linking {
+      transition: 0.2s ease;
+      color: #2ec4b6; 
+      margin: auto
+    }
+    .linking:hover {
+      transform: scale(1.15);
     }
