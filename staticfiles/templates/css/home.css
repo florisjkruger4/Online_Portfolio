@@ -43,6 +43,11 @@ body {
         display: none;
       }
     }
+    @media only screen and (max-width: 550px){
+      .iconholder{
+        display: none;
+      }
+    }
     @media only screen and (max-width: 991px){
       .mailBlob1{
         height: 280px;

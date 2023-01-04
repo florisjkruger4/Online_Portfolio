@@ -32,6 +32,9 @@
 
     <!-- JavaScript -->
     <script src="staticfiles/templates/javascript/home.js" type="text/javascript" defer></script>
+
+    <!-- For FormSubmit-->
+    <meta name="referrer" content="origin">
   </head>
 
   <body>
@@ -184,7 +187,7 @@
                   <a href="https://github.com/florisjkruger4/Storybook_Generator"><i class="fa-solid fa-code-branch linking" ></i></a>
                 </div>
                 
-                <div style="margin-left: auto;" >
+                <div style="margin-left: auto;" class="iconholder">
                   <img src="{% static 'images/Django_Logo.png' %}" style="width: 40px; filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(184deg) brightness(108%) contrast(101%);"/> 
                   &nbsp;
                   <img src="{% static 'images/python_Logo.png' %}" style="width: 40px; filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(184deg) brightness(108%) contrast(101%);"/>
@@ -241,7 +244,7 @@
                   <a href="https://github.com/florisjkruger4/YellowMap"><i class="fa-solid fa-code-branch linking"></i></a>
                 </div>
 
-                <div style="margin-left: auto;" >
+                <div style="margin-left: auto;" class="iconholder">
                   <img src="{% static 'images/Django_Logo.png' %}" style="width: 40px; filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(184deg) brightness(108%) contrast(101%);"/> 
                   &nbsp;
                   <img src="{% static 'images/python_Logo.png' %}" style="width: 40px; filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(184deg) brightness(108%) contrast(101%);"/>
@@ -292,7 +295,7 @@
                 <a href="https://github.com/florisjkruger4/Sorting_Visualizer"><i class="fa-solid fa-code-branch linking"></i></a>
               </div>
 
-              <div style="margin-left: auto;" >
+              <div style="margin-left: auto;" class="iconholder">
                   <img src="{% static 'images/Raylib_logo.png' %}" style="width: 40px; margin-left: auto; filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(184deg) brightness(108%) contrast(101%);"/>
                   &nbsp;
                   <img src="{% static 'images/cPlusPlus_Logo.png' %}" style="width: 48px; filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(184deg) brightness(108%) contrast(101%);"/>
@@ -340,7 +343,7 @@
                 <a href="https://github.com/florisjkruger4/Clear_The_Forest"><i class="fa-solid fa-code-branch linking"></i></a>
               </div>
               
-                <div style="margin-left: auto;" >
+                <div style="margin-left: auto;" class="iconholder">
                   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" fill="currentColor" class="bi bi-unity" viewBox="0 0 16 16" style="margin-left: auto;">
                     <path d="M15 11.2V3.733L8.61 0v2.867l2.503 1.466c.099.067.099.2 0 .234L8.148 6.3c-.099.067-.197.033-.263 0L4.92 4.567c-.099-.034-.099-.2 0-.234l2.504-1.466V0L1 3.733V11.2v-.033.033l2.438-1.433V6.833c0-.1.131-.166.197-.133L6.6 8.433c.099.067.132.134.132.234v3.466c0 .1-.132.167-.198.134L4.031 10.8l-2.438 1.433L7.983 16l6.391-3.733-2.438-1.434L9.434 12.3c-.099.067-.198 0-.198-.133V8.7c0-.1.066-.2.132-.233l2.965-1.734c.099-.066.197 0 .197.134V9.8L15 11.2Z"/></svg>
                     &nbsp;
@@ -409,14 +412,14 @@
                 <h2 style="text-align: center; padding-top: 15px;">Get In Touch</h2>
                 &nbsp;
                 <div style="display: flex; align-items: center; justify-content: center;" class="container">
-                  <form action="https://formsubmit.co/florisjkruger4@gmail.com" method="POST">
-                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                  <form action="https://formsubmit.co/c1b3a49c7dd9c8df29fdb8375f9ddc58" method="POST">
+                    <input type="text" name="name" id="name" placeholder="Your Name" class="form-control" required>
                     &nbsp; &nbsp;
-                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email" class="form-control" required>
                     &nbsp; &nbsp;
-                    <input type="text" name="phone" id="phone" placeholder="Your Phone Number">
+                    <input type="text" name="phone" id="phone" placeholder="Your Phone Number" class="form-control">
                     &nbsp; &nbsp;
-                    <textarea id="message" rows="4" placeholder="Message"></textarea>
+                    <textarea id="message" name="message" rows="4" placeholder="Message" class="form-control"></textarea>
                     &nbsp; &nbsp;
                     <button type="submit">Send <i class="fa-solid fa-paper-plane"></i></button>
                   </form>
