@@ -66,6 +66,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Online_Portfolio.wsgi.application'
 
 
+
+
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
